@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ $# -lt 2 ]; then
+    echo "Input error. Please input two numbers." 1>&2
+    exit 1
+else
+    a=$1;
+    b=$2;
+#    echo "a=$a,b=$b"
+    if [ $a -lt $b ]; then
+      r=$a;
+      a=$b;
+      b=$r;
+    fi
+
+    while [ ! $b -eq "0" ]; do
+        r=$(( $a%$b )) 
+        a=$b 
+        b=$r
+    done
+    echo "saidai kouyakusu : $a" 
+    exit 0
+fi
+
