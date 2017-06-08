@@ -1,3 +1,6 @@
 language: generic
 script:
   - bash -e ./test.sh
+  - bash -e ./test2.sh
+  - bash -e ./test3.sh
+  - bash -e ./test4.sh
